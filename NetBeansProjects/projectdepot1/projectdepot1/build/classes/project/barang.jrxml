@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="93331781-f904-4bed-8e75-e1dfbf66ec92">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[select * from tb_menu]]>
+	</queryString>
+	<field name="kode_menu" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_makanan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="stok_makanan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga_makanan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kode_katagori" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="102" splitType="Stretch">
+			<frame>
+				<reportElement uuid="c8a9e3f5-3e50-4c6d-92a0-7e1cf285ab3b" style="Row" mode="Opaque" x="2" y="84" width="797" height="18"/>
+			</frame>
+			<image>
+				<reportElement uuid="6c822c13-8ecf-493e-8514-25c582107242" x="0" y="0" width="501" height="102"/>
+				<imageExpression><![CDATA["C:\\Users\\asus\\Pictures\\logotulisan.jpg"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement uuid="07c28d4a-5c65-474b-b76f-4eb35aee20e8" x="359" y="55" width="443" height="47" backcolor="#996600"/>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement uuid="531b07a6-9616-427c-b237-853a1d1eb770" x="359" y="11" width="443" height="44" backcolor="#FFFF99"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="0279c5b5-77f7-433e-8d8a-f588cab92359" x="359" y="55" width="443" height="43" forecolor="#FFFF99"/>
+				<textElement textAlignment="Center">
+					<font fontName="FZShuTi" size="26" isBold="true" isItalic="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[DATA PERSEDIAAN MAKANAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b6d4f72b-efa6-4676-9f62-01e7614a4e4d" x="359" y="11" width="440" height="45" forecolor="#996600"/>
+				<textElement textAlignment="Center">
+					<font fontName="Adobe Garamond Pro Bold" size="26"/>
+				</textElement>
+				<text><![CDATA[LAPORAN HARIAN ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="18" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="abeab858-0cc1-4193-8f74-5536f062cc1e" style="Column header" x="0" y="0" width="159" height="18" forecolor="#000000"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[kode_menu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="78b8ed7c-b42a-405e-8589-81c72a454a24" style="Column header" x="477" y="0" width="159" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[harga_makanan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5d09bf1c-22aa-444f-a4c3-5ba19a215c64" style="Column header" x="636" y="0" width="159" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[kode_katagori]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2f3bfecd-e3d4-4815-8345-ca39183d0708" style="Column header" x="318" y="0" width="159" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[stok_makanan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="aa48efb0-37a6-4e09-a5a1-e614fa68c385" style="Column header" x="159" y="0" width="159" height="18" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[nama_makanan]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="b75d8bfc-e674-44ed-aa9d-0cbc68e19af7" style="Detail" positionType="Float" x="0" y="0" width="159" height="18"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kode_menu}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="d068d8cc-9645-4a58-b5dd-b5a68889b08a" style="Detail" positionType="Float" x="159" y="0" width="159" height="18"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_makanan}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="c0ea8504-f142-47c6-ac45-c2dd10ca079d" style="Detail" positionType="Float" x="318" y="0" width="159" height="18"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI Symbol" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stok_makanan}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="ae8012c8-d028-402d-846f-d386b7a55ad2" style="Detail" positionType="Float" x="477" y="0" width="159" height="18"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{harga_makanan}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="4b4dfc96-c6d3-41f4-87c0-1b8b4eeb35df" style="Detail" positionType="Float" x="636" y="0" width="159" height="18"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kode_katagori}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement uuid="65e588f1-bc6b-42dc-8009-c1e115b03e2d" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement uuid="3df65ec1-ce60-43a2-8940-8a1d9b386a2d" mode="Opaque" x="0" y="0" width="802" height="25" forecolor="#D0B48E" backcolor="#7F6002"/>
+				<textField evaluationTime="Report">
+					<reportElement uuid="899ac513-49d3-4c48-81f6-46cd17e02adc" style="Column header" x="739" y="3" width="58" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="da78b47c-e96b-4d72-9b17-991291461690" style="Column header" x="659" y="3" width="80" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="12" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement uuid="db2e4954-95d5-49ec-8c6f-5cfff7f1d7ea" style="Column header" x="2" y="3" width="197" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
