@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,12 +14,12 @@
 |
 */
 //Route::get('user', 'ManagementUserController@index');
-Route::resource('user', 'ManagementUserController');
+//Route::resource('user', 'ManagementUserController');
 
 
 Route::get('/', function () {
     return view('welcome');
 });
 Route::get("/home", function () {
-    return view("home");
+    return view("home", ["nama" => "Anggito Suryo B", "pelajaran" => ["Algoritma & Pemrograman", "Kalkulus", "Pemrograman Web"]]);
 });
