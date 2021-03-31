@@ -23,3 +23,6 @@ Route::get('/', function () {
 Route::get("/home", function () {
     return view("home", ["nama" => "Anggito Suryo B", "pelajaran" => ["Algoritma & Pemrograman", "Kalkulus", "Pemrograman Web"]]);
 });
+Route::group(['namespace' => 'Frontend'], function () {
+    Route::resource('home', 'HomeController');
+});
