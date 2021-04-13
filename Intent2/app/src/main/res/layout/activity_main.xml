@@ -8,11 +8,13 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+<!--    button pindah halaman-->
     <Button
         android:id="@+id/btn_pindah"
         android:text="Pindah Activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+<!--    button pindah data-->
     <Button
         android:id="@+id/btn_pindahdata"
         android:layout_width="match_parent"
@@ -23,36 +25,43 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_pindahobject"
         android:text="Pindah Activity Dengan Object"/>
+    button untuk menuju ke menu telepon
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_dial"
         android:text="Dial A Number"/>
+<!--   button untuk membuka maps button-->
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Intent Maps"
         android:id="@+id/btn_maps"/>
+<!--    button untuk share-->
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_share"
         android:text="Intent Share Text"/>
+<!--    button untuk mengirim sms-->
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_sms"
         android:text="Intent Kirim SMS"/>
+<!--    button untuk mengambil contact-->
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_getcontact"
         android:text="Ambil Kontak Phone"/>
+<!--    button untuk pindah activity result-->
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_pindahactivityresult"
         android:text="Pindah Activity Untuk Result"/>
+<!--    textview pada pick-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

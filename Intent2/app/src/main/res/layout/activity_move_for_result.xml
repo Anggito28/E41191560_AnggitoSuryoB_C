@@ -8,10 +8,10 @@
     tools:context=".MoveForResultActivity">
 
     <TextView
-        android:text="Pilih angka yang anda suka"
+        android:text="Methode perkalian angka"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
+<!--radio grup pada pick-->
     <RadioGroup
         android:id="@+id/radio_grup"
         android:layout_width="match_parent"
@@ -19,21 +19,21 @@
 
         <RadioButton
             android:id="@+id/radioButton100"
-            android:text="100"
+            android:text="2 + 6= "
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <RadioButton
             android:id="@+id/radioButton50"
-            android:text="50"
+            android:text="8 : 2 = "
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <RadioButton
             android:id="@+id/radioButton32"
-            android:text="32"
+            android:text="9 x 24 = "
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </RadioGroup>
-
+<!-- button submit -->
     <Button
         android:id="@+id/btnSubmit"
         android:text="Submit"

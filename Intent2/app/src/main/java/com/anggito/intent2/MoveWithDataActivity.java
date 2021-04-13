@@ -13,7 +13,7 @@ public class MoveWithDataActivity extends AppCompatActivity {
         setContentView(R.layout.activity_move_with_data);
 
         tvdataintent = findViewById(R.id.tvdataintent);
-
+//methode dalam memindah data
         String nama = getIntent().getStringExtra("extra_name");
         int age = getIntent().getIntExtra("extra_age", 0);
         String text = "Nama: "+nama+", usia: "+age;

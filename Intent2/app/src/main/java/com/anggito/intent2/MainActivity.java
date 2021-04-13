@@ -9,17 +9,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import org.jetbrains.annotations.Nullable;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+// Deklarasi class private dan variable
     private static final int REQUEST_CODE = 75;
     private static final int PICK_CONTACT_REQUEST = 1;
     private Button btn_pindah, btn_pindahdata, buttonMoveWithObject, buttonDialNumber, buttonMaps, buttonShare, buttonSMS, buttonGetContactPhone, buttonPindahActivityUntukResult;
     private TextView textViewResult;
-
+//methode button click
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         textViewResult = findViewById(R.id.textViewResult);
     }
-
+//method melakukan aksi
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -64,15 +63,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_pindahdata:
                 Intent moveWithDataIntent = new Intent(this, MoveWithDataActivity.class);
-                moveWithDataIntent.putExtra("extra_name", "DicodingAcademy Boy");
-                moveWithDataIntent.putExtra("extra_age", 5);
+                moveWithDataIntent.putExtra("extra_name", "Anggito Suryo Baskoro");
+                moveWithDataIntent.putExtra("extra_age", 20);
                 startActivity(moveWithDataIntent);
                 break;
             case R.id.btn_pindahobject:
 
                 break;
             case R.id.btn_dial:
-                String phoneNumber = "082302228538";
+                String phoneNumber = "081335319674";
                 Intent dialphone = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+phoneNumber));
                 startActivity(dialphone);
                 break;
@@ -82,13 +81,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_share:
                 Intent share = new Intent(Intent.ACTION_SEND);
-                share.putExtra(Intent.EXTRA_TEXT, "Mari Belajar Android di Dicoding");
+                share.putExtra(Intent.EXTRA_TEXT, "Mari Bermain PUBG STEAM");
                 share.setType("text/plain");
                 startActivity(Intent.createChooser(share, "share link"));
                 break;
             case R.id.btn_sms:
-                Intent sms = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto: 082302228538"));
-                sms.putExtra("sms_body", "Assalamualaykum");
+                Intent sms = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto: 081335319674"));
+                sms.putExtra("sms_body", "Gas gann");
                 startActivity(sms);
                 break;
             case R.id.btn_pindahactivityresult:
@@ -102,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
-
+//method pick
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

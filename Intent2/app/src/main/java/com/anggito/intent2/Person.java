@@ -4,11 +4,12 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Person implements Parcelable {
+//    variable declaration
     private String name;
     private int age;
     private String email;
     private String city;
-
+//methode mengambil dan menampilkan data
     public String getName() {
         return name;
     }
@@ -45,7 +46,7 @@ public class Person implements Parcelable {
     public int describeContents() {
         return 0;
     }
-
+// method menampilkan
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.name);
