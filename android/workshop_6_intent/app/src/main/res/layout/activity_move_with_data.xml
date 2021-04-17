@@ -9,6 +9,7 @@
     <TextView
         android:id="@+id/tvdataintent"
         android:text="ini activity yang menerima data"
+        android:textAlignment="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </RelativeLayout>

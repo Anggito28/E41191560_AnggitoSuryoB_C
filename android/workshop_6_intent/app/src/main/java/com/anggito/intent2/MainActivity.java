@@ -16,7 +16,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 // Deklarasi class private dan variable
     private static final int REQUEST_CODE = 75;
     private static final int PICK_CONTACT_REQUEST = 1;
-    private Button btn_pindah, btn_pindahdata, buttonMoveWithObject, buttonDialNumber, buttonMaps, buttonShare, buttonSMS, buttonGetContactPhone, buttonPindahActivityUntukResult;
+    private Button btn_pindah, btn_pindahdata, buttonMoveWithObject, buttonDialNumber,
+            buttonMaps, buttonShare, buttonSMS, buttonGetContactPhone, buttonPindahActivityUntukResult;
     private TextView textViewResult;
 //methode button click
     @Override

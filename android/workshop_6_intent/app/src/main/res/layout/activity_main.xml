@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_pindahobject"
         android:text="Pindah Activity Dengan Object"/>
-    button untuk menuju ke menu telepon
+<!--    button untuk menuju ke menu telepon-->
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
