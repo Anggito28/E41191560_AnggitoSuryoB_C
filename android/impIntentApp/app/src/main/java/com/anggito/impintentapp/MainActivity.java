@@ -1,5 +1,6 @@
 package com.anggito.impintentapp;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -12,8 +13,9 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
     Button button;
     EditText editText;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         button = findViewById(R.id.button);
@@ -22,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String url=editText.getText().toString();
-                Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                Intent intent= new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 startActivity(intent);
             }
         });
