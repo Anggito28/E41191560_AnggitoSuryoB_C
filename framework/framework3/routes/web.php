@@ -25,8 +25,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+// Route::get('/home', [App\Http\Controllers\frontend\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\Backend\DashboardController::class, 'index'])->name('dashboard');
 // Route::get('admin/profile', function() {
 //     //
 // })->middleware('auth');
@@ -35,22 +35,21 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //     //
 // })->middleware('first', 'second');
 
-Route::get('admin/profile', function() {
+Route::get('admin/profile', function () {
     //
 })->middleware('CheckAge::class');
 
-Route::get('/', function(){
-
+Route::get('/', function () {
 })->middleware('web');
 
-Route::group(['middleware' => ['web']], function (){
+Route::group(['middleware' => ['web']], function () {
     //
 });
 
-Route::middleware(['web', 'subscribed'])->group(function (){
+Route::middleware(['web', 'subscribed'])->group(function () {
     //
 });
 
-Route::put('post/{id}', function ($id){
+Route::put('post/{id}', function ($id) {
     //
 })->middleware('role:editor');
