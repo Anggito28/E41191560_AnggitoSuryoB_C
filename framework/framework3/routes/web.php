@@ -3,6 +3,7 @@
 use App\Http\Middleware\CheckAge;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Backend\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,8 +26,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\frontend\HomeController::class, 'index'])->name('home');
-Route::get('/home', [App\Http\Controllers\Backend\DashboardController::class, 'index'])->name('dashboard');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/admin', [App\Http\Controllers\Backend\DashboardController::class, 'index'])->name('dashboard');
 // Route::get('admin/profile', function() {
 //     //
 // })->middleware('auth');
